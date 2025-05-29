@@ -64,12 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				agrisync: {
-					primary: '#2C5F2D',
-					secondary: '#97BC62',
-					tertiary: '#4d3319',
-					blue: '#0077b6',
-					lightGreen: '#d9e3d3',
-					lightBrown: '#f5f0e6'
+					primary: '#3A5A40',
+					secondary: '#588157',
+					tertiary: '#4d3319', // This was existing, leaving as is.
+					blue: '#3498db',
+					lightGreen: '#A3B18A',
+					lightBrown: '#f5f0e6' // This was existing, leaving as is.
 				}
 			},
 			borderRadius: {

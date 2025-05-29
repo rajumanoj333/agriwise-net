@@ -1,8 +1,13 @@
-# Welcome to your Lovable project
-
-## Project info
+# AgriSync AI Dashboard
 
 **URL**: https://lovable.dev/projects/f4253d7c-5ea3-42fb-8cd1-3511ad0bc747
+
+## Project Overview
+
+AgriSync AI Dashboard is a web application designed to help users monitor and manage farm-related data and gain insights from a network of specialized AI agents.
+
+*   **AI Agent Network:** This section displays various AI agents that analyze data and provide recommendations concerning farm operations, weather patterns, market conditions, and sustainability practices.
+*   **Farm Insights:** This area presents a collection of widgets including local weather information, tailored crop recommendations, sustainability metrics, and other relevant farm data points.
 
 ## How can I edit this code?
 
@@ -52,13 +57,28 @@ npm run dev
 
 ## What technologies are used for this project?
 
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
 - React
 - shadcn-ui
 - Tailwind CSS
+- Lucide React (for icons)
+
+## Project Structure
+
+Here's a brief overview of the important directories:
+
+- `public/`: Static assets like images and icons.
+- `src/`: Main source code.
+  - `components/`: Custom React components used throughout the application (e.g., `AgentCard`, `Dashboard`).
+  - `components/ui/`: UI elements provided by the shadcn-ui library.
+  - `hooks/`: Custom React hooks (if any, this is a common directory).
+  - `lib/`: Utility functions and shared logic (e.g., `utils.ts`).
+  - `pages/`: While this project is primarily a single-page dashboard, this directory would hold different pages if the application grows. For now, it might be less relevant or contain the main layout.
+  - `App.tsx`: The main application component, sets up routing.
+  - `main.tsx`: The entry point of the application.
 
 ## How can I deploy this project?
 
