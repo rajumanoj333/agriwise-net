@@ -12,12 +12,13 @@ const Dashboard: React.FC = () => {
     <div className="container mx-auto py-6 px-4">
       <h2 className="text-2xl font-bold mb-6 text-agrisync-primary">AI Agent Network</h2>
       
+      {/* TODO: Agent statuses are currently hardcoded for demonstration. Integrate with actual data source. */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <AgentCard 
           title="Farmer Advisor Agent"
           description="Analyzes your farm data and provides personalized recommendations to optimize resource usage."
           icon={Database}
-          iconColor="text-agrisync-blue"
+          // iconColor prop removed
           status="active"
           lastUpdate="Today, 09:15 AM"
         />
@@ -25,23 +26,23 @@ const Dashboard: React.FC = () => {
           title="Weather Station Agent"
           description="Monitors local weather conditions and forecasts to help you plan farm activities."
           icon={Cloud}
-          iconColor="text-blue-500"
-          status="active"
+          // iconColor prop removed
+          status="inactive"
           lastUpdate="Today, 10:30 AM"
         />
         <AgentCard 
           title="Market Researcher Agent"
           description="Tracks market trends and crop prices to recommend the most profitable crops."
           icon={LineChart}
-          iconColor="text-green-500"
-          status="active"
+          // iconColor prop removed
+          status="loading"
           lastUpdate="Yesterday, 04:45 PM"
         />
         <AgentCard 
           title="Sustainability Agent"
           description="Analyzes environmental impact of your farming practices and suggests improvements."
           icon={Leaf}
-          iconColor="text-green-600"
+          // iconColor prop removed
           status="active"
           lastUpdate="Today, 08:00 AM"
         />

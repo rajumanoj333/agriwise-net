@@ -7,7 +7,7 @@ interface AgentCardProps {
   title: string;
   description: string;
   icon: LucideIcon;
-  iconColor: string;
+  // iconColor prop removed as it's no longer used; header icon is hardcoded to text-white
   status: 'active' | 'inactive' | 'loading';
   lastUpdate?: string;
 }
@@ -16,12 +16,12 @@ const AgentCard: React.FC<AgentCardProps> = ({
   title,
   description,
   icon: Icon,
-  iconColor,
+  // iconColor destructured prop removed
   status,
   lastUpdate
 }) => {
   const statusColors = {
-    active: 'bg-green-500',
+    active: 'bg-agrisync-secondary', // Changed from bg-green-500
     inactive: 'bg-gray-400',
     loading: 'bg-yellow-400 animate-pulse-slow'
   };
@@ -30,13 +30,15 @@ const AgentCard: React.FC<AgentCardProps> = ({
     <div className="agrisync-card">
       <div className="agrisync-card-header flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <Icon className={`h-5 w-5 ${iconColor}`} />
-          <h3 className="font-semibold">{title}</h3>
+          {/* Ensure icon is white on the gradient header */}
+          <Icon className="h-5 w-5 text-white" /> 
+          <h3 className="font-semibold">{title}</h3> {/* Will inherit text-white from parent */}
         </div>
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">
             <div className={`h-2 w-2 rounded-full ${statusColors[status]}`}></div>
-            <span className="text-xs capitalize">{status}</span>
+            {/* Ensure status text is white on the gradient header */}
+            <span className="text-xs capitalize text-white">{status}</span>
           </div>
         </div>
       </div>
